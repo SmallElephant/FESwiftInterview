@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 //        setUp()
-        setUp3()
+        setUp6()
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,8 +69,60 @@ class ViewController: UIViewController {
         print("求和数据:\(sumData)")
     }
     
+    
+    private func setUp4() {
+        
+        let data = [[1,2,3],[4,5,6]]
+        let mapData = data.map({ $0.map{ $0 + 1 } })
+        let flatMapData = data.flatMap({ $0.map{ $0 + 1 } })
+        print("map数据:\(mapData)---flatMap数据:\(flatMapData)")
+        
+        let optionalData: [String?] = ["1", nil, "2", "3"]
+        let optionalMap = optionalData.map({ $0 })
+        let optionalFlatMap = optionalData.flatMap({ $0 })
+        print("map数据:\(optionalMap)---flatMap数据:\(optionalFlatMap)")
+        
+        FELog("FlyElephant打印行号")
+    }
+    
+    private func setUp5() {
+        
+        defer {
+            print("执行----1")
+        }
+        
+        print("执行----2")
+        
+        defer {
+            print("执行----3")
+        }
+        
+        print("执行----4")
+        
+        defer {
+            print("执行----5")
+        }
+    }
+    
+    private func setUp6() {
+        let str:String = "FlyElephant"
+        
+        let fromIndex = str.index(str.startIndex, offsetBy: 2)
+        let endIndex = str.index(str.endIndex, offsetBy: -1)
+        let range = fromIndex..<endIndex
+        let result = str.substring(with: range)
+        print("字符串截取:\(result)")
+       
+    }
+    
     func testMin<T: Comparable>(x: T, y: T) -> T {
         return x < y ? x : y
+    }
+    
+    func FELog<T>(_ message:T, file:String = #file, function:String = #function,
+               line:Int = #line) {
+            let fileName = (file as NSString).lastPathComponent
+            print("\(fileName):\(line) \(function) | \(message)")
     }
 }
 

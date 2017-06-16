@@ -14,6 +14,7 @@
 		A8262B9F1EF1EEFC00DFFDE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8262B9D1EF1EEFC00DFFDE6 /* LaunchScreen.storyboard */; };
 		A8262BAA1EF1EEFD00DFFDE6 /* FESwiftInterviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8262BA91EF1EEFD00DFFDE6 /* FESwiftInterviewTests.swift */; };
 		A8262BB51EF1EEFD00DFFDE6 /* FESwiftInterviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8262BB41EF1EEFD00DFFDE6 /* FESwiftInterviewUITests.swift */; };
+		A85A37D31EF350BD002B3C79 /* BuyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85A37D21EF350BD002B3C79 /* BuyProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		A8262BB01EF1EEFD00DFFDE6 /* FESwiftInterviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FESwiftInterviewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8262BB41EF1EEFD00DFFDE6 /* FESwiftInterviewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FESwiftInterviewUITests.swift; sourceTree = "<group>"; };
 		A8262BB61EF1EEFD00DFFDE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A85A37D21EF350BD002B3C79 /* BuyProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				A8262B9B1EF1EEFC00DFFDE6 /* Assets.xcassets */,
 				A8262B9D1EF1EEFC00DFFDE6 /* LaunchScreen.storyboard */,
 				A8262BA01EF1EEFC00DFFDE6 /* Info.plist */,
+				A85A37D21EF350BD002B3C79 /* BuyProtocol.swift */,
 			);
 			path = FESwiftInterview;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8262B971EF1EEFC00DFFDE6 /* ViewController.swift in Sources */,
+				A85A37D31EF350BD002B3C79 /* BuyProtocol.swift in Sources */,
 				A8262B951EF1EEFC00DFFDE6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,6 +511,7 @@
 				A8262BBB1EF1EEFD00DFFDE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A8262BBC1EF1EEFD00DFFDE6 /* Build configuration list for PBXNativeTarget "FESwiftInterviewTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +520,7 @@
 				A8262BBE1EF1EEFD00DFFDE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A8262BBF1EF1EEFD00DFFDE6 /* Build configuration list for PBXNativeTarget "FESwiftInterviewUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +529,7 @@
 				A8262BC11EF1EEFD00DFFDE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
