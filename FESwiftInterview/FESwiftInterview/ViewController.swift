@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 //        setUp()
-        setUp6()
+        setUp15()
     }
 
     override func didReceiveMemoryWarning() {
@@ -114,6 +114,96 @@ class ViewController: UIViewController {
         print("字符串截取:\(result)")
        
     }
+    
+    
+    private func setUp7() {
+        
+        typealias EmptyBlock = (String) -> Void
+        
+        typealias SumBlock = (Int,Int) -> Int
+        
+        let sumBlock:SumBlock = {
+            (a:Int,b:Int) -> Int in
+            return a + b
+        }
+        
+        let result = sumBlock(100, 100)
+        print("闭包的结果:\(result)")
+    }
+    
+    private func setUp8() {
+        var student:Student? = Student(a: 27, b: 10)
+        print("年龄:\(student!.age)")
+        
+        var studentB:Student? = student!.setStudentAge(a: 28)
+        print("年龄:\(student!.age)---studentB年龄:\(studentB!.age)")
+        
+        student = nil
+        studentB = nil
+        
+        student?.setStudentAge(a: 29)
+    }
+    
+    private func setUp9() {
+        let str:String? = "test"
+        let str1:Optional<String> = "test"
+        
+        print("\(String(describing: str))---\(String(describing: str1))")
+        
+        print("\(str1![1])")
+    }
+    
+    private func setUp10() {
+        let student:Student = Student(a: 10, b: 10)
+        print("\(student.name)")
+    }
+    
+    private func setUp11() {
+        
+        let  options:UIViewAnimationOptions = [UIViewAnimationOptions.layoutSubviews,UIViewAnimationOptions.allowUserInteraction]
+        print("可选项:\(options)")
+        
+    }
+    
+    private func setUp12() {
+        let multipleOptions: MyOptions = [.firstOption, .secondOption]
+        if multipleOptions.contains(.secondOption) {
+            print("包含---SecondOption")
+        }
+        let allOptions = MyOptions(rawValue: 7)
+        if allOptions.contains(.thirdOption) {
+            print("FlyElephant---包含ThirdOption")
+        }
+    }
+    
+    private func setUp13() {
+        var mutableArray = [1,2,3]
+        for _ in mutableArray {
+            
+            mutableArray.removeLast()
+            print("结果:\(mutableArray)")
+        }
+    }
+    
+    private func setUp14() {
+        
+        let result = ["a","b","c"].contentRepeate(count: 2)
+        print("FlyElephant:\(result)")
+    }
+    
+    private func setUp15() {
+        let array = [Int].init(repeating: 1, count: 10)
+        let arraySlice = array[5...8]
+        print("\(arraySlice)")
+    }
+    
+    private func setUp16() {
+
+
+
+    }
+    
+
     
     func testMin<T: Comparable>(x: T, y: T) -> T {
         return x < y ? x : y
