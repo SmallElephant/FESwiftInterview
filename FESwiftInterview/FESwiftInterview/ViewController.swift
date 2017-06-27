@@ -115,6 +115,12 @@ class ViewController: UIViewController {
        
     }
     
+    private func setUp7() {
+     
+        var stack = IntStack()
+        stack.append(10)
+    }
+    
     func testMin<T: Comparable>(x: T, y: T) -> T {
         return x < y ? x : y
     }
